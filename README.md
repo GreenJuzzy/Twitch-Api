@@ -14,7 +14,7 @@ git clone https://github.com/GreenJuzzy/Twitch-Api
 
 1. Create an application on the [Twitch Developer Portal](https://dev.twitch.tv/).
 2. Copy the Client ID and Client Secret from the application.
-3. Then you're done! See [Examples](https://github.com/GreenJuzzy/Twitch-Api/blov/master/examples/content) for more information on usage.
+3. Then you're done! See [Examples](https://github.com/GreenJuzzy/Twitch-Api/blob/master/examples/content.md) for more information on usage.
 
 Suggest looking at [First Steps](https://github.com/GreenJuzzy/Twitch-Api/blob/master/examples/content/first_steps.md)
 <br>
