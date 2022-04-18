@@ -1,5 +1,5 @@
  - [ads](#ads)
-    - [start()]()
+    - [start()](#)
 
 
 <br>
@@ -10,7 +10,7 @@
 <br>
 
  - [api](#api)
-    - [call()]()
+    - [call()](#)
 
 
 <br>
@@ -18,27 +18,27 @@
  - [auth](#auth)
     - [client](#authclient)
     - [implicit](#authimplicit)
-        - [generate()](#generate)
+        - [generate(#)](#generate)
 
 
 <br>
 
  - [bits](#bits)
     - [cheermotes](#bitscheermotes)
-        - [get()](#get)
+        - [get(#)](#get)
     - [extensions](#bitsextensions)
-        - [get()](#get)
+        - [get(#)](#get)
     - [leaderboard](#bitsleaderboard)
-        - [get()](#get)
+        - [get(#)](#get)
 
 
 <br>
 
  - [channels](#channels)
     - [editors](#channelseditors)
-        - [get()](#get)
-    - [get()]()
-    - [modify()]()
+        - [get(#)](#get)
+    - [get()](#)
+    - [modify()](#)
 
 
 <br>
@@ -54,8 +54,8 @@
 <br>
 
  - [credentials](#credentials)
-    - [get()]()
-    - [set()]()
+    - [get()](#)
+    - [set()](#)
 
 
 <br>
@@ -146,8 +146,8 @@
 <br>
 
  - [users](#users)
-    - [get()]()
-    - [update()]()
+    - [get()](#)
+    - [update()](#)
 
 
 <br>
