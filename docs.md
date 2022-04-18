@@ -16,26 +16,26 @@
 <br>
 
  - [auth](#auth)
-    - [client](#auth/client)
-    - [implicit](#auth/implicit)
+    - [client](#authclient)
+    - [implicit](#authimplicit)
         - [generate()](#generate)
 
 
 <br>
 
  - [bits](#bits)
-    - [cheermotes](#bits/cheermotes)
+    - [cheermotes](#bitscheermotes)
         - [get()](#get)
-    - [extensions](#bits/extensions)
+    - [extensions](#bitsextensions)
         - [get()](#get)
-    - [leaderboard](#bits/leaderboard)
+    - [leaderboard](#bitsleaderboard)
         - [get()](#get)
 
 
 <br>
 
  - [channels](#channels)
-    - [editors](#channels/editors)
+    - [editors](#channelseditors)
         - [get()](#get)
     - [get.js]()
     - [modify.js]()
