@@ -17,10 +17,16 @@ git clone https://github.com/GreenJuzzy/Twitch-Api
 3. Then you're done! See [Examples](https://github.com/GreenJuzzy/Twitch-Api/blob/master/examples/content.md) for more information on usage.
 
 Suggest looking at [First Steps](https://github.com/GreenJuzzy/Twitch-Api/blob/master/examples/firstSteps.md)
+
+<br>
+
+Full documentation on [docs.md](https://github.com/GreenJuzzy/Twitch-Api/blob/master/docs.md)
+
 <br>
 
 ---
 <br>
+
 Feel free to open an [Issue](https://github.com/GreenJuzzy/Twitch-Api/issues) or [Pull Request](https://github.com/GreenJuzzy/Twitch-Api/pulls) if you have any questions or suggestions.
 
 <br>

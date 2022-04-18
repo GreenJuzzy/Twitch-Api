@@ -1,6 +1,6 @@
 var api = require("../../api")
 var util = require("../../../util")
-var index = require("../../../index")
+var creds = require("../../credentials")
 
 /**
  * get(broadcaster_id, credentials)
@@ -17,7 +17,7 @@ module.exports = async (broadcaster_id, credentials) => {
     var data = await api.call({
         path: `/bits/cheermotes${util.generateQueryString({ "broadcaster_id": broadcaster_id })}`,
         method: "GET",
-        headers: util.TwitchHeaders(credentials || index.credentials || {}),
+        headers: util.TwitchHeaders(credentials || await creds.get() || {}),
     })
 
     return data.data || data

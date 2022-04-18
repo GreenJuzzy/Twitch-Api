@@ -1,6 +1,6 @@
 var api = require("../api")
 var util = require("../../util")
-var index = require("../../index")
+var creds = require("../credentials")
 
 /**
  * mofify({ broadcaster_id, game_id, broadcaster_language, title, delay }, credentials)
@@ -21,7 +21,7 @@ module.exports = async ({ broadcaster_id, game_id, broadcaster_language, title, 
     var data = await api.call({
         path: `/channels?${util.generateQueryString()}`,
         method: "PATCH",
-        headers: util.TwitchHeaders(credentials || index.credentials || {}),
+        headers: util.TwitchHeaders(credentials || await creds.get() || {}),
         body: {
             "game_id": game_id,
             "broadcaster_language": broadcaster_language,

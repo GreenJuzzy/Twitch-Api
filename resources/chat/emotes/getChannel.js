@@ -3,25 +3,21 @@ var util = require("../../../util")
 var creds = require("../../credentials")
 
 /**
- * get({ count, period, started_at, user_id }, credentials)
- * @param {number} count The number of objects to return
- * @param {string} period The period of the leaderboard
- * @param {string} started_at The date of the leaderboard
- * @param {string} user_id The user ID 
+ * getChannel(broadcaster_id, credentials
+ * @param {string} broadcaster_id The broadcaster ID
  * @param {object} credentials Credentials Object
  * @param {string} credentials.client_id Twitch Client ID
  * @param {string} credentials.client_secret Twitch Client Secret
  * @param {string} credentials.access_token Twitch Access Token
- * @requires bits:read
+ * @requires None
 */
 
-module.exports = async ({ count, period, started_at, user_id }, credentials) => {
+module.exports = async (broadcaster_id, credentials) => {
 
     var data = await api.call({
-        path: `/bits/leaderboard${util.generateQueryString({ "count": count, "period": period, "started_at": started_at, "user_id": user_id })}`,
+        path: `/chat/emotes${util.generateQueryString({ "broadcaster_id": broadcaster_id })}`,
         method: "GET",
         headers: util.TwitchHeaders(credentials || await creds.get() || {}),
-
     })
 
     return data.data || data

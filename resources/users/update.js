@@ -1,6 +1,6 @@
 var api = require("../api")
 var util = require("../../util")
-var index = require("../../index")
+var creds = require("../credentials")
 
 /**
  * update(description, credentials)
@@ -17,7 +17,7 @@ module.exports = async (description, credentials) => {
     var data = await api.call({
         path: `/users?description=${encodeURI(description)}`,
         method: "PUT",
-        headers: util.TwitchHeaders(credentials || index.credentials || {}),
+        headers: util.TwitchHeaders(credentials || await creds.get() || {}),
     })
 
     return data.data || data

@@ -1,7 +1,7 @@
 var fetch = require("node-fetch")
 
 /**
- * Call Function
+ * call({ url: "", path: "", method: "", headers: {}, body: {} })
  * @param {object} param0 Object
  * @requires None
  */

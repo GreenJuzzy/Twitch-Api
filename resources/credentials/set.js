@@ -1,7 +1,7 @@
 var creds = { }
 
 /**
- * set({ "client_id": "x", "client_secret": "x" })
+ * set({ "client_id": "x", "client_secret": "x", "access_token": "x" })
  * @param {object} credentials Credentials Object
  * @param {string} credentials.client_id The client id of the application
  * @param {string} credentials.client_secret The client secret of the application

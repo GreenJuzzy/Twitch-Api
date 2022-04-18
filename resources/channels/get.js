@@ -1,6 +1,6 @@
 var api = require("../api")
 var util = require("../../util")
-var index = require("../../index")
+var creds = require("../credentials")
 
 /**
  * get(broadcaster_id, credentials)
@@ -16,12 +16,9 @@ module.exports = async (broadcaster_id, credentials) => {
     if (typeof broadcaster_id == "object") broadcaster_id = broadcaster_id.join("&broadcaster_id=")
 
     var data = await api.call({
-        path: `/channels${encodeURI(util.generateQueryString(""))}`,
+        path: `/channels${(util.generateQueryString({ "broadcaster_id": broadcaster_id }))}`,
         method: "GET",
-        headers: util.TwitchHeaders(credentials || index.credentials || {}),
-        body: {
-
-        },
+        headers: util.TwitchHeaders(credentials || await creds.get() || {}),
     })
 
     return data.data || data

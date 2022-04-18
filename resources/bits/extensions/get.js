@@ -1,6 +1,6 @@
 var api = require("../../api")
 var util = require("../../../util")
-var index = require("../../../index")
+var creds = require("../../credentials")
 
 /**
  * get({ extension_id, id, after, first }, credentials)
@@ -20,7 +20,7 @@ module.exports = async ({ extension_id, id, after, first }, credentials) => {
     var data = await api.call({
         path: `/extensions/transactions${util.generateQueryString({ "extension_id": extension_id, "id": id, "after": after, "first": first })}`,
         method: "GET",
-        headers: util.TwitchHeaders(credentials || index.credentials || {}),
+        headers: util.TwitchHeaders(credentials || await creds.get() || {}),
 
     })
 

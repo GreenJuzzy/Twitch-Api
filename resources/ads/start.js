@@ -1,6 +1,6 @@
 var api = require("../api")
 var util = require("../../util")
-var index = require("../../index")
+var creds = require("../credentials")
 
 /**
  * start({ broadcaster_id, length }, credentials)
@@ -18,7 +18,7 @@ module.exports = async ({broadcaster_id, length}, credentials) => {
     var data = await api.call({
         path: "/channels/commercial",
         method: "POST",
-        headers: util.TwitchHeaders(credentials || index.credentials || {}),
+        headers: util.TwitchHeaders(credentials || await creds.get() || {}),
         body: {
             "broadcaster_id": `${broadcaster_id}`,
             "length": length

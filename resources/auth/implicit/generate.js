@@ -1,5 +1,6 @@
 var api = require("../api")
 var util = require("../../util")
+var creds = require("../../credentials")
 
 /**
  * generate()
@@ -15,7 +16,7 @@ module.exports = async (parameter, credentials) => {
     var data = await api.call({
         path: "",
         method: "",
-        headers: util.TwitchHeaders(credentials),
+        headers: util.TwitchHeaders(credentials || await creds.get() || {}),
         body: {
 
         },
