@@ -1,5 +1,5 @@
  - [ads](#ads)
-    - [start.js]()
+    - [start()]()
 
 
 <br>
@@ -10,7 +10,7 @@
 <br>
 
  - [api](#api)
-    - [call.js]()
+    - [call()]()
 
 
 <br>
@@ -37,8 +37,8 @@
  - [channels](#channels)
     - [editors](#channelseditors)
         - [get()](#get)
-    - [get.js]()
-    - [modify.js]()
+    - [get()]()
+    - [modify()]()
 
 
 <br>
@@ -54,8 +54,8 @@
 <br>
 
  - [credentials](#credentials)
-    - [get.js]()
-    - [set.js]()
+    - [get()]()
+    - [set()]()
 
 
 <br>
@@ -146,8 +146,8 @@
 <br>
 
  - [users](#users)
-    - [get.js]()
-    - [update.js]()
+    - [get()]()
+    - [update()]()
 
 
 <br>
