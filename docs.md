@@ -188,7 +188,7 @@ string | credentials.access_token | The access token of the user
 start({ broadcaster_id, length }, credentials)
 ```
 
-- [Source](https://github.com/GreenJuzzy/Twitch-Api/blob/master/resources/resources/ads/start.js#L16)
+- [Source](https://github.com/GreenJuzzy/Twitch-Api/blob/master/resources/ads/start.js#L16)
 
 <br>
 
@@ -218,7 +218,7 @@ object | param0 | Object
 Call Function
 ```
 
-- [Source](https://github.com/GreenJuzzy/Twitch-Api/blob/master/resources/resources/api/call.js#L9)
+- [Source](https://github.com/GreenJuzzy/Twitch-Api/blob/master/resources/api/call.js#L9)
 
 <br>
 
@@ -246,7 +246,7 @@ string | credentials.access_token | Twitch Access Token
 generate()
 ```
 
-- [Source](https://github.com/GreenJuzzy/Twitch-Api/blob/master/resources/resources/auth/implicit/generate.js#L13)
+- [Source](https://github.com/GreenJuzzy/Twitch-Api/blob/master/resources/auth/implicit/generate.js#L13)
 
 <br>
 
@@ -275,7 +275,7 @@ string | credentials.access_token | Twitch Access Token
 get(broadcaster_id, credentials)
 ```
 
-- [Source](https://github.com/GreenJuzzy/Twitch-Api/blob/master/resources/resources/bits/cheermotes/get.js#L15)
+- [Source](https://github.com/GreenJuzzy/Twitch-Api/blob/master/resources/bits/cheermotes/get.js#L15)
 
 ## bits/extensions
 <br>
@@ -301,7 +301,7 @@ string | credentials.access_token | Twitch Access Token
 get({ extension_id, id, after, first }, credentials)
 ```
 
-- [Source](https://github.com/GreenJuzzy/Twitch-Api/blob/master/resources/resources/bits/extensions/get.js#L18)
+- [Source](https://github.com/GreenJuzzy/Twitch-Api/blob/master/resources/bits/extensions/get.js#L18)
 
 ## bits/leaderboard
 <br>
@@ -327,7 +327,7 @@ string | credentials.access_token | Twitch Access Token
 get({ count, period, started_at, user_id }, credentials)
 ```
 
-- [Source](https://github.com/GreenJuzzy/Twitch-Api/blob/master/resources/resources/bits/leaderboard/get.js#L18)
+- [Source](https://github.com/GreenJuzzy/Twitch-Api/blob/master/resources/bits/leaderboard/get.js#L18)
 
 <br>
 
@@ -356,7 +356,7 @@ string | credentials.access_token | Twitch Access Token
 get(broadcaster_id, credentials)
 ```
 
-- [Source](https://github.com/GreenJuzzy/Twitch-Api/blob/master/resources/resources/channels/editors/get.js#L15)
+- [Source](https://github.com/GreenJuzzy/Twitch-Api/blob/master/resources/channels/editors/get.js#L15)
 
 <br>
 
@@ -378,7 +378,7 @@ string | credentials.access_token | Twitch Access Token
 get(broadcaster_id, credentials)
 ```
 
-- [Source](https://github.com/GreenJuzzy/Twitch-Api/blob/master/resources/resources/channels/get.js#L15)
+- [Source](https://github.com/GreenJuzzy/Twitch-Api/blob/master/resources/channels/get.js#L15)
 
 <br>
 
@@ -404,7 +404,7 @@ string | credentials.access_token | Twitch Access Token
 mofify({ broadcaster_id, game_id, broadcaster_language, title, delay }, credentials)
 ```
 
-- [Source](https://github.com/GreenJuzzy/Twitch-Api/blob/master/resources/resources/channels/modify.js#L19)
+- [Source](https://github.com/GreenJuzzy/Twitch-Api/blob/master/resources/channels/modify.js#L19)
 
 <br>
 
@@ -439,7 +439,7 @@ Type | Name | Description
 get()
 ```
 
-- [Source](https://github.com/GreenJuzzy/Twitch-Api/blob/master/resources/resources/credentials/get.js#L8)
+- [Source](https://github.com/GreenJuzzy/Twitch-Api/blob/master/resources/credentials/get.js#L8)
 
 <br>
 
@@ -460,7 +460,7 @@ string | credentials.access_token | The access token of the user
 set({ "client_id": "x", "client_secret": "x" })
 ```
 
-- [Source](https://github.com/GreenJuzzy/Twitch-Api/blob/master/resources/resources/credentials/set.js#L12)
+- [Source](https://github.com/GreenJuzzy/Twitch-Api/blob/master/resources/credentials/set.js#L12)
 
 <br>
 
@@ -590,7 +590,7 @@ string | credentials.access_token | Twitch Access Token
 get(user_login, credentials)
 ```
 
-- [Source](https://github.com/GreenJuzzy/Twitch-Api/blob/master/resources/resources/users/get.js#L16)
+- [Source](https://github.com/GreenJuzzy/Twitch-Api/blob/master/resources/users/get.js#L16)
 
 <br>
 
@@ -612,7 +612,7 @@ string | credentials.access_token | Twitch Access Token
 update(description, credentials)
 ```
 
-- [Source](https://github.com/GreenJuzzy/Twitch-Api/blob/master/resources/resources/users/update.js#L15)
+- [Source](https://github.com/GreenJuzzy/Twitch-Api/blob/master/resources/users/update.js#L15)
 
 <br>
 
