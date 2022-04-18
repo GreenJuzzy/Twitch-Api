@@ -1,21 +1,21 @@
- - [ads](ads)
+ - [ads](#ads)
     - [start.js]()
 
 
 <br>
 
- - [analystics](analystics)
+ - [analystics](#analystics)
 
 
 <br>
 
- - [api](api)
+ - [api](#api)
     - [call.js]()
 
 
 <br>
 
- - [auth](auth)
+ - [auth](#auth)
     - [client](#auth/client)
     - [implicit](#auth/implicit)
         - [generate()](#generate)
@@ -23,7 +23,7 @@
 
 <br>
 
- - [bits](bits)
+ - [bits](#bits)
     - [cheermotes](#bits/cheermotes)
         - [get()](#get)
     - [extensions](#bits/extensions)
@@ -34,7 +34,7 @@
 
 <br>
 
- - [channels](channels)
+ - [channels](#channels)
     - [editors](#channels/editors)
         - [get()](#get)
     - [get.js]()
@@ -43,116 +43,116 @@
 
 <br>
 
- - [chat](chat)
+ - [chat](#chat)
 
 
 <br>
 
- - [clips](clips)
+ - [clips](#clips)
 
 
 <br>
 
- - [credentials](credentials)
+ - [credentials](#credentials)
     - [get.js]()
     - [set.js]()
 
 
 <br>
 
- - [entitlements](entitlements)
+ - [entitlements](#entitlements)
 
 
 <br>
 
- - [eventsub](eventsub)
+ - [eventsub](#eventsub)
 
 
 <br>
 
- - [extensions](extensions)
+ - [extensions](#extensions)
 
 
 <br>
 
- - [games](games)
+ - [games](#games)
 
 
 <br>
 
- - [goals](goals)
+ - [goals](#goals)
 
 
 <br>
 
- - [hypetrain](hypetrain)
+ - [hypetrain](#hypetrain)
 
 
 <br>
 
- - [moderation](moderation)
+ - [moderation](#moderation)
 
 
 <br>
 
- - [music](music)
+ - [music](#music)
 
 
 <br>
 
- - [points](points)
+ - [points](#points)
 
 
 <br>
 
- - [polls](polls)
+ - [polls](#polls)
 
 
 <br>
 
- - [predictions](predictions)
+ - [predictions](#predictions)
 
 
 <br>
 
- - [schedule](schedule)
+ - [schedule](#schedule)
 
 
 <br>
 
- - [search](search)
+ - [search](#search)
 
 
 <br>
 
- - [streams](streams)
+ - [streams](#streams)
 
 
 <br>
 
- - [subscriptions](subscriptions)
+ - [subscriptions](#subscriptions)
 
 
 <br>
 
- - [tags](tags)
+ - [tags](#tags)
 
 
 <br>
 
- - [teams](teams)
+ - [teams](#teams)
 
 
 <br>
 
- - [users](users)
+ - [users](#users)
     - [get.js]()
     - [update.js]()
 
 
 <br>
 
- - [videos](videos)
+ - [videos](#videos)
 
 
 <br>
