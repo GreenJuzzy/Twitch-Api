@@ -17,6 +17,7 @@
 
  - [auth](#auth)
     - [client](#authclient)
+        - get()
     - [implicit](#authimplicit)
         - generate()
 
@@ -44,6 +45,9 @@
 <br>
 
  - [chat](#chat)
+    - [emotes](#chatemotes)
+        - getChannel()
+        - getGlobal()
 
 
 <br>
@@ -91,6 +95,8 @@
 <br>
 
  - [moderation](#moderation)
+    - [automod](#moderationautomod)
+        - check()
 
 
 <br>
@@ -126,6 +132,12 @@
 <br>
 
  - [streams](#streams)
+    - [followed](#streamsfollowed)
+        - get()
+    - get()
+    - [marker](#streamsmarker)
+        - create()
+        - get()
 
 
 <br>
@@ -215,7 +227,7 @@ object | param0 | Object
 
  #### Example
 ```javascript
-Call Function
+call({ url: "", path: "", method: "", headers: {}, body: {} })
 ```
 
 - [Source](https://github.com/GreenJuzzy/Twitch-Api/blob/master/resources/api/call.js#L9)
@@ -225,6 +237,28 @@ Call Function
 ---
 ## auth
 <br>
+
+## auth/client
+<br>
+
+### `get`
+ 
+ #### Parameters
+Type | Name | Description
+:- | :- | :-
+object | credentials | Credentials Object
+string | credentials.client_id | Twitch Client ID
+string | credentials.client_secret | Twitch Client Secret
+string | credentials.access_token | Twitch Access Token
+
+#### Scope - `Scope`
+
+ #### Example
+```javascript
+undefined
+```
+
+- [Source](https://github.com/GreenJuzzy/Twitch-Api/blob/master/resources/auth/client/get.js#L13)
 
 ## auth/implicit
 <br>
@@ -246,7 +280,7 @@ string | credentials.access_token | Twitch Access Token
 generate()
 ```
 
-- [Source](https://github.com/GreenJuzzy/Twitch-Api/blob/master/resources/auth/implicit/generate.js#L13)
+- [Source](https://github.com/GreenJuzzy/Twitch-Api/blob/master/resources/auth/implicit/generate.js#L14)
 
 <br>
 
@@ -412,6 +446,51 @@ mofify({ broadcaster_id, game_id, broadcaster_language, title, delay }, credenti
 ## chat
 <br>
 
+## chat/emotes
+<br>
+
+### `getChannel`
+ 
+ #### Parameters
+Type | Name | Description
+:- | :- | :-
+string | broadcaster_id | The broadcaster ID
+object | credentials | Credentials Object
+string | credentials.client_id | Twitch Client ID
+string | credentials.client_secret | Twitch Client Secret
+string | credentials.access_token | Twitch Access Token
+
+#### Scope - `None`
+
+ #### Example
+```javascript
+getChannel(broadcaster_id, credentials
+```
+
+- [Source](https://github.com/GreenJuzzy/Twitch-Api/blob/master/resources/chat/emotes/getChannel.js#L15)
+
+## chat/emotes
+<br>
+
+### `getGlobal`
+ 
+ #### Parameters
+Type | Name | Description
+:- | :- | :-
+object | credentials | Credentials Object
+string | credentials.client_id | Twitch Client ID
+string | credentials.client_secret | Twitch Client Secret
+string | credentials.access_token | Twitch Access Token
+
+#### Scope - `Scope`
+
+ #### Example
+```javascript
+undefined
+```
+
+- [Source](https://github.com/GreenJuzzy/Twitch-Api/blob/master/resources/chat/emotes/getGlobal.js#L13)
+
 <br>
 
 ---
@@ -458,7 +537,7 @@ string | credentials.access_token | The access token of the user
 
  #### Example
 ```javascript
-set({ "client_id": "x", "client_secret": "x" })
+set({ "client_id": "x", "client_secret": "x", "access_token": "x" })
 ```
 
 - [Source](https://github.com/GreenJuzzy/Twitch-Api/blob/master/resources/credentials/set.js#L12)
@@ -505,6 +584,28 @@ set({ "client_id": "x", "client_secret": "x" })
 ## moderation
 <br>
 
+## moderation/automod
+<br>
+
+### `check`
+ 
+ #### Parameters
+Type | Name | Description
+:- | :- | :-
+object | credentials | Credentials Object
+string | credentials.client_id | Twitch Client ID
+string | credentials.client_secret | Twitch Client Secret
+string | credentials.access_token | Twitch Access Token
+
+#### Scope - `Scope`
+
+ #### Example
+```javascript
+undefined
+```
+
+- [Source](https://github.com/GreenJuzzy/Twitch-Api/blob/master/resources/moderation/automod/check.js#L13)
+
 <br>
 
 ---
@@ -546,6 +647,93 @@ set({ "client_id": "x", "client_secret": "x" })
 ---
 ## streams
 <br>
+
+## streams/followed
+<br>
+
+### `get`
+ 
+ #### Parameters
+Type | Name | Description
+:- | :- | :-
+object | credentials | Credentials Object
+string | credentials.client_id | Twitch Client ID
+string | credentials.client_secret | Twitch Client Secret
+string | credentials.access_token | Twitch Access Token
+
+#### Scope - `user:read:follows`
+
+ #### Example
+```javascript
+undefined
+```
+
+- [Source](https://github.com/GreenJuzzy/Twitch-Api/blob/master/resources/streams/followed/get.js#L13)
+
+<br>
+
+### `get`
+ 
+ #### Parameters
+Type | Name | Description
+:- | :- | :-
+object | credentials | Credentials Object
+string | credentials.client_id | Twitch Client ID
+string | credentials.client_secret | Twitch Client Secret
+string | credentials.access_token | Twitch Access Token
+
+#### Scope - `None`
+
+ #### Example
+```javascript
+undefined
+```
+
+- [Source](https://github.com/GreenJuzzy/Twitch-Api/blob/master/resources/streams/get.js#L13)
+
+## streams/marker
+<br>
+
+### `create`
+ 
+ #### Parameters
+Type | Name | Description
+:- | :- | :-
+object | credentials | Credentials Object
+string | credentials.client_id | Twitch Client ID
+string | credentials.client_secret | Twitch Client Secret
+string | credentials.access_token | Twitch Access Token
+
+#### Scope - `channel:manage:broadcast`
+
+ #### Example
+```javascript
+undefined
+```
+
+- [Source](https://github.com/GreenJuzzy/Twitch-Api/blob/master/resources/streams/marker/create.js#L13)
+
+## streams/marker
+<br>
+
+### `get`
+ 
+ #### Parameters
+Type | Name | Description
+:- | :- | :-
+object | credentials | Credentials Object
+string | credentials.client_id | Twitch Client ID
+string | credentials.client_secret | Twitch Client Secret
+string | credentials.access_token | Twitch Access Token
+
+#### Scope - `user:read:broadcast`
+
+ #### Example
+```javascript
+undefined
+```
+
+- [Source](https://github.com/GreenJuzzy/Twitch-Api/blob/master/resources/streams/marker/get.js#L13)
 
 <br>
 
