@@ -3,13 +3,14 @@ var util = require("../../util")
 var index = require("../../index")
 
 /**
+ * start({ broadcaster_id, length }, credentials)
  * @param {string} broadcaster_id The broadcaster ID
  * @param {number} length The length of the commercial in seconds ( 30, 60, 90, 120, 150, 180 )
  * @param {object} credentials Credentials Object
  * @param {string} credentials.client_id The client id of the application
  * @param {string} credentials.client_secret The client secret of the application
- * @param {string} credentials.access_token The redirect uri of the application
- * @requires Scope `channel:edit:commercial`
+ * @param {string} credentials.access_token The access token of the user
+ * @requires channel:edit:commercial
  */
 
 module.exports = async ({broadcaster_id, length}, credentials) => {

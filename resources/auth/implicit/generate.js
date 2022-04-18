@@ -2,11 +2,12 @@ var api = require("../api")
 var util = require("../../util")
 
 /**
+ * generate()
  * @param {object} credentials Credentials Object
  * @param {string} credentials.client_id Twitch Client ID
  * @param {string} credentials.client_secret Twitch Client Secret
  * @param {string} credentials.access_token Twitch Access Token
- * @requires Scope `None`
+ * @requires None
 */
 
 module.exports = async (parameter, credentials) => {

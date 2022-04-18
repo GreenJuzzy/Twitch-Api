@@ -3,6 +3,7 @@ var util = require("../../../util")
 var index = require("../../../index")
 
 /**
+ * get({ count, period, started_at, user_id }, credentials)
  * @param {number} count The number of objects to return
  * @param {string} period The period of the leaderboard
  * @param {string} started_at The date of the leaderboard
@@ -11,7 +12,7 @@ var index = require("../../../index")
  * @param {string} credentials.client_id Twitch Client ID
  * @param {string} credentials.client_secret Twitch Client Secret
  * @param {string} credentials.access_token Twitch Access Token
- * @requires Scope `bits:read`
+ * @requires bits:read
 */
 
 module.exports = async ({ count, period, started_at, user_id }, credentials) => {

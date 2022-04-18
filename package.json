@@ -1,0 +1,28 @@
+{
+  "name": "twitchapi",
+  "version": "1.0.0",
+  "description": "<br>",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GreenJuzzy/Twitch-Api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GreenJuzzy/Twitch-Api/issues"
+  },
+  "homepage": "https://github.com/GreenJuzzy/Twitch-Api#readme",
+  "devDependencies": {
+    "better-docs": "^2.7.2",
+    "jsdoc": "^3.6.10",
+    "jsdoc-to-markdown": "^7.1.1"
+  }
+}

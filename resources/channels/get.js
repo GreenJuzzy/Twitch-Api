@@ -3,12 +3,13 @@ var util = require("../../util")
 var index = require("../../index")
 
 /**
+ * get(broadcaster_id, credentials)
  * @param {string | string[]} broadcaster_id The broadcaster ID(s)
  * @param {object} credentials Credentials Object
  * @param {string} credentials.client_id Twitch Client ID
  * @param {string} credentials.client_secret Twitch Client Secret
  * @param {string} credentials.access_token Twitch Access Token
- * @requires Scope `None`
+ * @requires None
 */
 
 module.exports = async (broadcaster_id, credentials) => {

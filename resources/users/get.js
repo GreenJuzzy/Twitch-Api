@@ -3,12 +3,13 @@ var util = require("../../util")
 var creds = require("../credentials")
 
 /**
+ * get(user_login, credentials)
  * @param {string[] | string} user_login The user login(s) to get
  * @param {object} credentials Credentials Object
  * @param {string} credentials.client_id Twitch Client ID
  * @param {string} credentials.client_secret Twitch Client Secret
  * @param {string} credentials.access_token Twitch Access Token
- * @requires Scope `None`
+ * @requires None
 */
 
 

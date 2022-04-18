@@ -1,5 +1,11 @@
 var fetch = require("node-fetch")
 
+/**
+ * Call Function
+ * @param {object} param0 Object
+ * @requires None
+ */
+
 module.exports = async ({ url, path, method, headers, body = undefined }) => {
     var statusData
     try {
