@@ -97,6 +97,12 @@
  - [moderation](#moderation)
     - [automod](#moderationautomod)
         - check()
+    - ban()
+    - [banned](#moderationbanned)
+        - get()
+    - [mods](#moderationmods)
+        - get()
+    - unban()
 
 
 <br>
@@ -255,10 +261,10 @@ string | credentials.access_token | Twitch Access Token
 
  #### Example
 ```javascript
-undefined
+get()
 ```
 
-- [Source](https://github.com/GreenJuzzy/Twitch-Api/blob/master/resources/auth/client/get.js#L13)
+- [Source](https://github.com/GreenJuzzy/Twitch-Api/blob/master/resources/auth/client/get.js#L14)
 
 ## auth/implicit
 <br>
@@ -592,6 +598,89 @@ set({ "client_id": "x", "client_secret": "x", "access_token": "x" })
  #### Parameters
 Type | Name | Description
 :- | :- | :-
+string | broadcaster_id | The broadcaster's ID
+string | msg_id | The message's ID
+string | msg_text | The message's text
+string | user_id | The user's ID
+object | credentials | Credentials Object
+string | credentials.client_id | Twitch Client ID
+string | credentials.client_secret | Twitch Client Secret
+string | credentials.access_token | Twitch Access Token
+
+#### Scope - `moderation:read`
+
+ #### Example
+```javascript
+check({ broadcaster_id: "", msg_id: "", msg_text: "", user_id: "" }, credentials)
+```
+
+- [Source](https://github.com/GreenJuzzy/Twitch-Api/blob/master/resources/moderation/automod/check.js#L18)
+
+<br>
+
+### `ban`
+ 
+ #### Parameters
+Type | Name | Description
+:- | :- | :-
+string | broadcaster_id | The broadcaster's ID
+string | moderator_id | The moderator's ID
+string | duration | The duration of the ban in seconds
+string | reason | The reason for the ban
+string | user_id | The user's ID
+object | credentials | Credentials Object
+string | credentials.client_id | Twitch Client ID
+string | credentials.client_secret | Twitch Client Secret
+string | credentials.access_token | Twitch Access Token
+
+#### Scope - `moderator:manage:banned_users`
+
+ #### Example
+```javascript
+ban({ broadcaster_id, moderator_id, duration, reason, user_id }, credentials)
+```
+
+- [Source](https://github.com/GreenJuzzy/Twitch-Api/blob/master/resources/moderation/ban.js#L19)
+
+## moderation/banned
+<br>
+
+### `get`
+ 
+ #### Parameters
+Type | Name | Description
+:- | :- | :-
+string | broadcaster_id | The broadcaster's ID
+string | user_id | The user's ID
+number | first | The number of results to return
+string | after | The cursor to use for pagination
+string | before | The cursor to use for pagination
+object | credentials | Credentials Object
+string | credentials.client_id | Twitch Client ID
+string | credentials.client_secret | Twitch Client Secret
+string | credentials.access_token | Twitch Access Token
+
+#### Scope - `moderation:read`
+
+ #### Example
+```javascript
+get({ broadcaster_id, user_id, first, after, before }, credentials)
+```
+
+- [Source](https://github.com/GreenJuzzy/Twitch-Api/blob/master/resources/moderation/banned/get.js#L19)
+
+## moderation/mods
+<br>
+
+### `get`
+ 
+ #### Parameters
+Type | Name | Description
+:- | :- | :-
+string | broadcaster_id | The broadcaster's ID
+string | user_id | The user's ID
+number | first | The number of results to return
+string | after | The cursor to use for pagination
 object | credentials | Credentials Object
 string | credentials.client_id | Twitch Client ID
 string | credentials.client_secret | Twitch Client Secret
@@ -601,10 +690,34 @@ string | credentials.access_token | Twitch Access Token
 
  #### Example
 ```javascript
-undefined
+get({ broadcaster_id, user_id, first, after }, credentials)
 ```
 
-- [Source](https://github.com/GreenJuzzy/Twitch-Api/blob/master/resources/moderation/automod/check.js#L13)
+- [Source](https://github.com/GreenJuzzy/Twitch-Api/blob/master/resources/moderation/mods/get.js#L18)
+
+<br>
+
+### `unban`
+ 
+ #### Parameters
+Type | Name | Description
+:- | :- | :-
+string | broadcaster_id | The broadcaster's ID
+string | moderator_id | The moderator's ID
+string | user_id | The user's ID
+object | credentials | Credentials Object
+string | credentials.client_id | Twitch Client ID
+string | credentials.client_secret | Twitch Client Secret
+string | credentials.access_token | Twitch Access Token
+
+#### Scope - `Scope`
+
+ #### Example
+```javascript
+unban({ broadcaster_id, moderator_id, user_id }, credentials)
+```
+
+- [Source](https://github.com/GreenJuzzy/Twitch-Api/blob/master/resources/moderation/unban.js#L17)
 
 <br>
 

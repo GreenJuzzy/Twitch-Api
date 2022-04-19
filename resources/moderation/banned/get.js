@@ -3,11 +3,12 @@ var util = require("../../../util")
 var creds = require("../../credentials")
 
 /**
- * check({ broadcaster_id: "", msg_id: "", msg_text: "", user_id: "" }, credentials)
+ * get({ broadcaster_id, user_id, first, after, before }, credentials)
  * @param {string} broadcaster_id The broadcaster's ID
- * @param {string} msg_id The message's ID
- * @param {string} msg_text The message's text
  * @param {string} user_id The user's ID
+ * @param {number} first The number of results to return
+ * @param {string} after The cursor to use for pagination
+ * @param {string} before The cursor to use for pagination
  * @param {object} credentials Credentials Object
  * @param {string} credentials.client_id Twitch Client ID
  * @param {string} credentials.client_secret Twitch Client Secret
@@ -15,17 +16,12 @@ var creds = require("../../credentials")
  * @requires moderation:read
 */
 
-module.exports = async ({ broadcaster_id, msg_id, msg_text, user_id }, credentials) => {
+module.exports = async ({ broadcaster_id, user_id, first, after, before }, credentials) => {
 
     var data = await api.call({
-        path: `/moderation/enforcements/status${(util.generateQueryString({ broadcaster_id }))}`,
-        method: "POST",
+        path: `/moderation/banned${(util.generateQueryString({ broadcaster_id, user_id, first, after, before }))}`,
+        method: "GET",
         headers: util.TwitchHeaders(credentials || await creds.get() || {}),
-        body: {
-            "msg_id": msg_id,
-            "msg_text": msg_text,
-            "user_id": user_id
-        },
     })
 
     return data.data || data

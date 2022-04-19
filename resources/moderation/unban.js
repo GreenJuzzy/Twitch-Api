@@ -3,7 +3,10 @@ var util = require("../../util")
 var creds = require("../credentials")
 
 /**
- * get()
+ * unban({ broadcaster_id, moderator_id, user_id }, credentials)
+ * @param {string} broadcaster_id The broadcaster's ID
+ * @param {string} moderator_id The moderator's ID
+ * @param {string} user_id The user's ID
  * @param {object} credentials Credentials Object
  * @param {string} credentials.client_id Twitch Client ID
  * @param {string} credentials.client_secret Twitch Client Secret
@@ -11,16 +14,13 @@ var creds = require("../credentials")
  * @requires Scope `None`
 */
 
-module.exports = async (parameter, credentials) => {
+module.exports = async ({ broadcaster_id, moderator_id, user_id }, credentials) => {
 
     var data = await api.call({
-        path: "",
-        method: "",
+        path: `/moderation/bans${(util.generateQueryString({ broadcaster_id, moderator_id, user_id }))}`,
+        method: "DELETE",
         headers: util.TwitchHeaders(credentials || await creds.get() || {}),
-        body: {
-
-        },
     })
 
-    return data
+    return data.data || data
 }
