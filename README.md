@@ -1,6 +1,6 @@
 # Object Oriented - Twitch API Wrapper
 
-### This repository is an object oriented wrapper for the Twitch API.
+### This repository is an object oriented wrapper for the Twitch API. The documentation and usage will get updated soon.
 <br>
 
 Clone the repository using
