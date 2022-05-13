@@ -8,6 +8,8 @@ Clone the repository using
 git clone https://github.com/GreenJuzzy/Twitch-Api
 ```
 
+node-fetch@2.6.7 is required
+
 ---
 ## Starting
 <br>
