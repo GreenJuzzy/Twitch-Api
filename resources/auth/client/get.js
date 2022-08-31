@@ -1,6 +1,6 @@
-var api = require("../api")
-var util = require("../../util")
-var creds = require("../credentials")
+var api = require("../../api")
+var util = require("../../../util")
+var creds = require("../../credentials")
 
 /**
  * get()
@@ -11,15 +11,10 @@ var creds = require("../credentials")
  * @requires Scope `None`
 */
 
-module.exports = async (parameter, credentials) => {
-
+module.exports = async ({ client_id, client_secret }) => {
     var data = await api.call({
-        path: "",
-        method: "",
-        headers: util.TwitchHeaders(credentials || await creds.get() || {}),
-        body: {
-
-        },
+        url: `https://id.twitch.tv/oauth2/token?client_id=${client_id}&client_secret=${client_secret}&grant_type=client_credentials`,
+        method: "POST",
     })
 
     return data

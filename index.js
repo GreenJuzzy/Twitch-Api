@@ -1,4 +1,5 @@
 module.exports = {
+    auth: require("./resources/auth"),
     credentials: require("./resources/credentials"),
     ads: require("./resources/ads"),
     analysis: require("./resources/analystics"),
