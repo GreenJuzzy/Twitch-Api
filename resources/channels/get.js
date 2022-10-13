@@ -12,11 +12,14 @@ var creds = require("../credentials")
  * @requires None
 */
 
-module.exports = async (broadcaster_id, credentials) => {
+module.exports = async ({ broadcaster_id }, credentials) => {
     if (typeof broadcaster_id == "object") broadcaster_id = broadcaster_id.join("&broadcaster_id=")
 
+    console.log(typeof broadcaster_id)
+    console.log(util.generateQueryString({ broadcaster_id }))
+
     var data = await api.call({
-        path: `/channels${(util.generateQueryString({ "broadcaster_id": broadcaster_id }))}`,
+        path: `/channels${(util.generateQueryString({ broadcaster_id }))}`,
         method: "GET",
         headers: util.TwitchHeaders(credentials || await creds.get() || {}),
     })
