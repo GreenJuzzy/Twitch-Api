@@ -6,14 +6,15 @@ var fetch = require("node-fetch")
  * @requires None
  */
 
-module.exports = async ({ url, path, method, headers, body = undefined }) => {
+module.exports = async ({ url, path, method, headers, body = undefined, type="default" }) => {
     var statusData
     try {
         var options = {
             method: method,
             headers: headers,
-            body: JSON.stringify(body)
+            body: type == "json" ? body : JSON.stringify(body)
         }
+
         if (!body) delete options.body
         
 

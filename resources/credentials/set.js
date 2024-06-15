@@ -9,7 +9,7 @@ var creds = { }
  * @requires None
  */
 
-module.exports = async (credentials) => {
+module.exports = (credentials) => {
     creds = credentials ? credentials : creds
     return creds
 }

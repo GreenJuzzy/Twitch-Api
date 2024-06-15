@@ -5,6 +5,6 @@ var set = require("./set")
  * @requires None
  */
 
-module.exports = async () => {
+module.exports = () => {
     return set()
 }

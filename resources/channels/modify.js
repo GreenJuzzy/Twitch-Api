@@ -19,16 +19,22 @@ var creds = require("../credentials")
 module.exports = async ({ broadcaster_id, game_id, broadcaster_language, title, delay}, credentials) => {
 
     var data = await api.call({
-        path: `/channels?${util.generateQueryString()}`,
+        path: `/channels${util.generateQueryString({ "broadcaster_id": broadcaster_id})}`,
         method: "PATCH",
-        headers: util.TwitchHeaders(credentials || await creds.get() || {}),
+        headers: {
+            ...util.TwitchHeaders(credentials || await creds.get() || {}),
+            "Content-Type": "application/json"
+    },
         body: {
-            "game_id": game_id,
-            "broadcaster_language": broadcaster_language,
-            "title": title,
-            "delay": delay
+            broadcaster_id,
+            game_id,
+            broadcaster_language,
+            title,
+            delay
         },
     })
+
+    if(data?.statusData?.status == 204) return { success: true}
 
     return data.data || data
 }
